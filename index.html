@@ -13,123 +13,147 @@
     />
   </head>
   <body class="vh-100" style="overflow-x: hidden">
-    <div class="row p-4">
+    <div class="row p-5">
       <div class="col-md-6">
-        <h3>Inputs</h3>
-        <section id="inputs-section">
-          <form>
-            <label for="factored-load">Factored load in kN</label>
-            <input
-              type="number"
-              ste="any"
-              id="factored-load"
-              name="factored-load"
-            /><br /><br />
-            <label for="length-tension">Length of tension member in mm</label>
-            <input
-              type="number"
-              step="any"
-              id="length-tension"
-              name="length-tension"
-            /><br /><br />
-            <label for="slenderness">Allowable slenderness ratio</label>
-            <input
-              type="number"
-              step="any"
-              id="slenderness"
-              name="slenderness"
-            /><br /><br />
-          </form>
-        </section>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h3>Inputs</h3>
+            <section id="inputs-section">
+              <form>
+                <label for="factored-load">Factored load in kN</label>
+                <input
+                  class="float-right"
+                  type="number"
+                  ste="any"
+                  id="factored-load"
+                  name="factored-load"
+                /><br /><br />
+                <label for="length-tension"
+                  >Length of tension member in mm</label
+                >
+                <input
+                  class="float-right"
+                  type="number"
+                  step="any"
+                  id="length-tension"
+                  name="length-tension"
+                /><br /><br />
+                <label for="slenderness">Allowable slenderness ratio</label>
+                <input
+                  class="float-right"
+                  type="number"
+                  step="any"
+                  id="slenderness"
+                  name="slenderness"
+                /><br /><br />
+              </form>
+            </section>
+          </div>
+        </div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <h3>Properties of Bolts</h3>
+            <section id="grade-section">
+              <form>
+                <input
+                  type="radio"
+                  id="grade1"
+                  name="grade"
+                  value="grade1"
+                  onclick="selectGrades(event)"
+                />
+                <label for="grade1"> Grade 4.6 </label><br />
+                <input
+                  type="radio"
+                  id="grade2"
+                  name="grade"
+                  value="grade2"
+                  onclick="selectGrades(event)"
+                />
+                <label for="grade2"> Grade 8.8 </label><br />
+              </form>
+              <form>
+                <label for="uts">Ultimate Tensile Strength in MPa</label>
+                <input
+                  class="float-right"
+                  type="number"
+                  step="any"
+                  id="uts"
+                  name="uts"
+                /><br /><br />
+                <label for="bolt-diameter">Diameter of Bolt in mm</label>
+                <input
+                  class="float-right"
+                  type="number"
+                  step="any"
+                  id="bolt-diameter"
+                  name="bolt-diameter"
+                /><br /><br />
+              </form>
+            </section>
+          </div>
+        </div>
       </div>
       <div class="col-md-6">
-        <h3>Properties of Bolts</h3>
-        <section id="grade-section">
-          <form>
-            <input
-              type="radio"
-              id="grade1"
-              name="grade"
-              value="grade1"
-              onclick="selectGrades(event)"
-            />
-            <label for="grade1"> Grade 4.6 </label><br />
-            <input
-              type="radio"
-              id="grade2"
-              name="grade"
-              value="grade2"
-              onclick="selectGrades(event)"
-            />
-            <label for="grade2"> Grade 8.8 </label><br />
-          </form>
-          <form>
-            <label for="uts">Ultimate Tensile Strength in MPa</label>
-            <input type="number" step="any" id="uts" name="uts" /><br /><br />
-            <label for="bolt-diameter">Diameter of Bolt in mm</label>
-            <input
-              type="number"
-              step="any"
-              id="bolt-diameter"
-              name="bolt-diameter"
-            /><br /><br />
-          </form>
-        </section>
-        <section id="pitch-end-distance">
-          <h4>Pitch and end distance</h4>
-          <form>
-            <input type="checkbox" id="pe1" name="pe1" value="pe1" />
-            <label for="pe1"> Allow program to calculate values </label><br />
-            <input type="checkbox" id="pe2" name="pe2" value="pe2" />
-            <label for="pe2"> Take min. value according to code IS 800 </label
-            ><br />
-          </form>
-          <form>
-            <label for="pitch">Pitch in mm</label>
-            <input
-              type="number"
-              step="any"
-              id="pitch"
-              name="pitch"
-            /><br /><br />
-            <label for="end-distance">End distance in mm</label>
-            <input
-              type="number"
-              step="any"
-              id="end-distance"
-              name="end-distance"
-            /><br /><br />
-          </form>
-        <!-- </section>
-        <section id="partial-safety-factor">
-          <h4>Parital Safety Factor</h4>
-          <input type="checkbox" id="psf" name="psf" value="psf" />
-          <label for="psf"> Take according to IS 800 table 5 (cl 5.4.1) </label
-          ><br />
-          <label for="csf">Custom Safety Factor (ymb)</label>
-          <input type="number" step="any" id="csf" name="csf" /><br /><br />
-        </section> -->
-        <section id="type-of-section">
-          <h3>Type of Section</h3>
-          <form>
-            <input
-              type="radio"
-              id="tos1"
-              name="tos"
-              value="tos1"
-              onclick="selectTypeOfSection(event)"
-            />
-            <label for="tos1"> Equal </label><br />
-            <input
-              type="radio"
-              id="tos2"
-              name="tos"
-              value="tos2"
-              onclick="selectTypeOfSection(event)"
-            />
-            <label for="tos2"> Unequal </label><br />
-          </form>
-        </section>
+        <div class="card mb-3">
+          <div class="card-body">
+            <section id="pitch-end-distance">
+              <h4>Pitch and end distance</h4>
+              <form>
+                <input type="checkbox" id="pe1" name="pe1" value="pe1" />
+                <label for="pe1"> Allow program to calculate values </label
+                ><br />
+                <input type="checkbox" id="pe2" name="pe2" value="pe2" />
+                <label for="pe2">
+                  Take min. value according to code IS 800 </label
+                ><br />
+              </form>
+              <form>
+                <label for="pitch">Pitch in mm</label>
+                <input
+                  class="float-right"
+                  type="number"
+                  step="any"
+                  id="pitch"
+                  name="pitch"
+                /><br /><br />
+                <label for="end-distance">End distance in mm</label>
+                <input
+                  class="float-right"
+                  type="number"
+                  step="any"
+                  id="end-distance"
+                  name="end-distance"
+                /><br /><br />
+              </form>
+            </section>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <section id="type-of-section">
+              <h3>Type of Section</h3>
+              <form>
+                <input
+                  type="radio"
+                  id="tos1"
+                  name="tos"
+                  value="tos1"
+                  onclick="selectTypeOfSection(event)"
+                />
+                <label for="tos1"> Equal </label><br />
+                <input
+                  type="radio"
+                  id="tos2"
+                  name="tos"
+                  value="tos2"
+                  onclick="selectTypeOfSection(event)"
+                />
+                <label for="tos2"> Unequal </label><br />
+              </form>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
     <div class="d-flex justify-content-center">
@@ -155,6 +179,10 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"
   ></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
   <script type="text/javascript" src="main.js"></script>
 </html>
