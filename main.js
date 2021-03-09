@@ -1,4 +1,3 @@
-console.log('main')
 var factoredLoad = null
 var lengthTension = null
 var slenderness = null
