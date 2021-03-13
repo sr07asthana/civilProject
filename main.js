@@ -14,12 +14,12 @@ var safetyFactor = 1.25
 var type = null
 function selectGrades(e) {
     if (document.getElementById("grade1").checked) {
-        grade = 4.6
+        grade = 400
     }
     if (document.getElementById("grade2").checked) {
-        grade = 8.8
+        grade = 800
     }
-    document.getElementById("uts").value=grade
+    document.getElementById("uts").value= grade
 }
 
 function submitFirstPage(event) {
@@ -27,10 +27,11 @@ function submitFirstPage(event) {
     factoredLoad = parseFloat(document.getElementById("factored-load").value)
     lengthTension = parseFloat(document.getElementById("length-tension").value)
     slenderness = parseFloat(document.getElementById("slenderness").value)
-    pitch = parseFloat(document.getElementById("pitch").value)
+boltDiameter = parseFloat(document.getElementById("bolt-diameter").value)
+    pitch = 2.5 * boltDiameter
     boltUTS = parseFloat(document.getElementById("uts").value)
-    endDistance = parseFloat(document.getElementById("end-distance").value)
-    boltDiameter = parseFloat(document.getElementById("bolt-diameter").value)
+    endDistance = 1.5 * boltDiameter
+    
     console.log(factoredLoad)
     localStorage.setItem("factoredLoad", factoredLoad)
     localStorage.setItem("lengthTension", lengthTension)

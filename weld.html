@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design of Tension Members</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="vh-100" style="overflow-x: hidden">
+    <div class="row justify-content-center p-5">
+      <div class="col-md-6">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h3>Inputs</h3>
+            <section id="inputs-section">
+              <form>
+                <label for="factored-load">Factored load in kN</label>
+                <input
+                  class="float-right"
+                  type="number"
+                  ste="any"
+                  id="factored-load"
+                  name="factored-load"
+                /><br /><br />
+                <label for="length-tension"
+                  >Length of tension member in mm</label
+                >
+                <input
+                  class="float-right"
+                  type="number"
+                  step="any"
+                  id="length-tension"
+                  name="length-tension"
+                /><br /><br />
+                <label for="slenderness">Allowable slenderness ratio</label>
+                <input
+                  class="float-right"
+                  type="number"
+                  step="any"
+                  id="slenderness"
+                  name="slenderness"
+                /><br /><br />
+                <label for="throttle-thickness">Throat thickness in mm</label>
+                <input
+                  class="float-right"
+                  type="number"
+                  step="any"
+                  id="throat-thickness"
+                  name="throat-thickness"
+                /><br /><br />
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <a href="weldDetails.html"
+        ><button class="btn btn-primary" onclick="submitFirstPage(event)">
+          Next
+        </button>
+      </a>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script type="text/javascript" src="weld.js"></script>
+</html>
